@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookshelf Apps</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-3 rounded sticky-top">
+        <div class="container-fluid d-flex">
+            <div class="w-100">
+                <a class="navbar-brand" href="#"><strong>Bookshelf Apps</strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse flex-shrink-1" id="navbarSupportedContent">
+                <form class="d-flex" role="search" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Cari Buku..." id="searchInput"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Main Content Start -->
+    <main class="container-fluid p-5">
+        <div class="row p-3">
+            <div class="col-6 mx-auto">
+                <div class="shadow p-3 rounded">
+                    <h3 class="text-center p-2">Masukkan Buku Baru</h3>
+                    <form action="#" id="form">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="titleInput" placeholder="Judul" required
+                                minlength="5">
+                            <label for="titleInput">Judul</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="authorInput" placeholder="Penulis" required
+                                minlength="2">
+                            <label for="authorInput">Penulis</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="yearInput" placeholder="Tahun" value="2023"
+                                required minlength="4" maxlength="4">
+                            <label for="yearInput">Tahun</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="isRead">
+                            <label class="form-check-label" for="isRead">
+                                Selesai Dibaca
+                            </label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <button type="submit" class="btn btn-primary">Tambahkan Buku</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row p-3">
+            <div class="col-6 mx-auto">
+                <div class="shadow p-3 rounded">
+                    <h3 class="text-center p-2">Belum Selesai Dibaca</h3>
+                    <div class="list-item" id="books"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-3">
+            <div class="col-6 mx-auto">
+                <div class="shadow p-3 rounded">
+                    <h3 class="text-center p-2">Selesai Dibaca</h3>
+                    <div class="list-item" id="completed-books"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main Content End -->
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
